@@ -8,7 +8,16 @@
   <% else %>
   <% end %>
   <h5>Cuisine: <%= @restaurant.category %></h5>
-  <!-- <h5>Rating: <%#= @reviews.content %></h5> -->
+
+  <h5>Reviews:
+  <p><%= link_to "Add Restaurant Review", new_restaurant_review_path(@restaurant) %></p>
+    <% @restaurant.reviews.each do |review| %>
+    <div class="review">
+      <p><%= review.content %></p>
+      <p><%= '🥑' * review.rating %></p>
+    </div>
+    <% end %>
+  </h5>
 
   <%= link_to "Back to Restaurants", restaurants_path %>
 </div>
