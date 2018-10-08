@@ -1,0 +1,8 @@
+new.html.erb
+<div class="container">
+  <h1>Restaurant.new</h1>
+  <%= form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content, label: "Write your Review" %>
+    <%= f.input :rating %>
+  <% end %>
+</div>

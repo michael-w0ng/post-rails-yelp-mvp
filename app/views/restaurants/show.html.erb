@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Restaurant.find(params[:id])</h1>
+
+  <h4><%= @restaurant.name %></h4>
+  <h5>Address: <%= @restaurant.address %></h5>
+  <% if @restaurant.phone_number != nil %>
+    <h5>Phone #: <%= @restaurant.phone_number %></h5>
+  <% else %>
+  <% end %>
+  <h5>Cuisine: <%= @restaurant.category %></h5>
+  <!-- <h5>Rating: <%#= @reviews.content %></h5> -->
+
+  <%= link_to "Back to Restaurants", restaurants_path %>
+</div>
